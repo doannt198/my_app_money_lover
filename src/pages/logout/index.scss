@@ -1,0 +1,17 @@
+.logout {
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+
+        .btn-login {
+            position: absolute;
+            left: 50px;
+            bottom: 50px;
+        }
+    }
+
+    &-image {
+    }
+}

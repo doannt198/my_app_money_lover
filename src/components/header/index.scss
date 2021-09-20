@@ -1,0 +1,151 @@
+.header {
+    &-wrapper {
+        display: flex;
+        background: white;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.4);
+    }
+
+    &-left {
+        .wallet {
+            &-wrapper {
+                display: flex;
+                align-items: center;
+            }
+            &-image {
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            &-info {
+                padding-left:20px;
+                position: relative;
+                cursor: pointer;
+                label {
+                    cursor: pointer;
+                }
+            }
+            &-name {
+                cursor: pointer;
+                font-size: 12px;
+                color: rgba(0,0,0,.87);
+                line-height: 21px;
+                img {
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+            &-amount {
+                font-size: 14px;
+                font-weight: bold;
+            }
+            &-list {
+                transition: 0.5s ease-in-out;
+                background: white;
+                border-radius: 5px;
+                position: absolute;
+                min-width: 150px;
+                width: 250px;
+                padding: 10px;
+                box-shadow: 0 0 10px gray;
+                opacity: 0;
+                visibility: hidden;
+
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &-item {
+                border-bottom: 1px solid rgb(207, 206, 206);
+                padding: 10px;
+                font-size: 12px !important;
+                color: rgba(0,0,0,.54);
+                width: 100%;
+                cursor: pointer;
+
+                &.title {
+                    text-align: center;
+                    color: rgba(0,0,0,.54);
+                }
+
+                &--name {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: black;
+                }
+
+                &--active {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    img {
+                        height: 20px !important;
+                        width: 20px !important;
+                        margin: 0px !important;
+                    }
+                }
+
+                &.detail {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        height: 40px;
+                        width: 40px;
+                        margin-right: 20px;
+                    }
+
+                    &:hover{
+                        background: rgb(207, 206, 206);;
+                        transition: 0.5s ease-in-out;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    /* &-center {
+        
+    }
+ */
+    &-right {
+        .method {
+            display: flex;
+            justify-content: center;
+            
+            &-item {
+                padding: 0 10px;
+
+                img {
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.05);
+                        transition: 0.5s ease-in-out;
+                    }
+                }
+            }
+
+            .btn-add-transaction {
+                text-decoration: none;
+                border: 0px;
+                background: #1aa333;
+                padding: 10px;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0 0 4px gray;
+                }
+            }
+        }
+    }
+}

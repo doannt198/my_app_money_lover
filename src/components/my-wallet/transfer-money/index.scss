@@ -1,0 +1,105 @@
+#transferMoneyContent {
+    color: rgba(0,0,0,.54);
+    .header {
+        padding: 10px 0px;
+        font-size: 20px;
+    }
+   
+    .title {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 0px;
+    }
+
+    .group {
+        display: flex;
+        width: 100%;
+
+        .item {
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(209, 205, 205);
+            width: 33.33%;
+            border-radius: 5px;
+
+            &-note {
+                width: 100%;
+                input {
+                    width: 100%;
+                    padding: 5px;
+                    font-size: 14px;
+                    margin-right: 5px 0px;
+                    border: none;
+                }
+            }
+
+            &-content {
+                display: flex;
+                padding: 5px 0px;
+                img {
+                    margin-right: 5px;
+                    height: 30px;
+                    width: 30px;
+                }
+                .right-chevron {
+                    height: 15px;
+                    width: 15px;
+                }
+                .right {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                }
+
+                input.money{
+                    padding: 10px 3px;
+                    width: 100%;
+                    border: none;
+                }
+            }
+        }
+
+        .p-calendar-w-btn .p-inputtext {
+            padding: 10px 3px;
+        }
+    }
+
+    .count-to-report, .add-fee-transfer{
+        padding: 10px 0px;
+        display: flex;
+        align-items: center;
+        input {
+            height: 15px;
+            width: 15px;
+            margin-right: 20px;
+        }
+        .title {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .description {
+            font-size: 12px;
+        }
+    }
+
+    .button-wrapper {
+        text-align: right;
+
+        .btn {
+            border: none;
+            padding: 10px 30px;
+            color: #2db84c;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+            &:hover {
+                background: #97e5a8;
+            }
+        }
+    }
+}

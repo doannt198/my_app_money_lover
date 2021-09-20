@@ -1,0 +1,61 @@
+.left {
+    width: 100px;
+    position: fixed;
+    height: 100vh;
+    text-align: center;
+    background: white;
+    box-shadow: 5px 5px 5px 0px rgba(77, 76, 76, 0.3);
+    .menu {
+        &-item {
+            padding: 13px 0;
+
+            a {
+                color: rgba(0,0,0,.54);
+                img {
+                    filter: invert(0.5) sepia(0);
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    color: #2db84c;
+                    img {
+                        filter: none;
+                        transition: 0.3s;
+                    }
+                    p {
+                        font-weight: 600;
+                    }
+                }
+            }
+            
+            &.active {
+                p {
+                    color: #2db84c;
+                    font-weight: 600;
+                }
+
+                img {
+                    filter: none;
+                    transition: 0.3s;
+                }
+
+            }
+
+            &:hover {
+                cursor: pointer;
+                transition: 0.5s ease-in-out;
+                color: rgb(68, 67, 67);
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.p-sidebar .p-sidebar-content {
+    padding: 0 !important;
+}

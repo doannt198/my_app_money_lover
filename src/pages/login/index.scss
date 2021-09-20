@@ -1,0 +1,185 @@
+body {
+   
+}
+
+.login-page {
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#00710f 314px,#ebebeb -100%);
+    min-height: 100vh;
+    
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        min-height: 100vh;
+        max-width: 100%;
+        position: relative;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-top: 54px;
+            margin-bottom: 34px;
+        }
+
+        .login {
+            display: flex;
+            justify-content: center;
+            color: #707070;
+
+            &-wrapper {
+                background-color: white;
+                box-shadow: 0 0 5px gray;
+                border-radius: 20px;
+                width: 650px;
+                padding: 34px 40px 40px;
+            }
+
+            &-title {
+                text-align: center;
+                margin-bottom: 34px;
+            }
+
+            &-contain {
+                display: flex;
+            }
+
+            
+            &-left {
+                flex: 1;
+
+                .login-social {
+                    display: flex;
+                    flex-direction: column;
+                    border-right: 2px solid rgb(223, 218, 218);
+                    margin-right: 15px;
+                }
+
+                .btn {
+                    padding: 10px;
+                    border-radius: 10px;
+                    margin: 5px 15px 5px 0px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                  
+                }
+
+                .btn-google {
+                    color: #fa5d5d;
+                    border: 2px solid #fa5d5d;
+                    &:hover {
+                        background: #fa5d5d;
+                        color: white;
+                    }
+                }
+
+                .btn-facebook {
+                    color: #1877f2;
+                    border: 2px solid #1877f2;
+                    &:hover {
+                        background: #1877f2;
+                        color: white;
+                    }
+                }
+
+                .btn-apple {
+                    color: rgba(0,0,0,.87);
+                    border: 2px solid rgba(0,0,0,.87);
+                    &:hover {
+                        background: rgba(0,0,0,.87);
+                        color: white;
+                    }
+                }
+            }
+
+            &-right {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+
+                input {
+                    border: none;
+                    font-size: 14px;
+                    padding: 10px 5px;
+                    margin: 10px 0px;
+                }
+
+                .forgot-password {
+                    text-align: right;
+                    a {
+                        color: #00bc2a;
+                        &:hover {
+                            color: #01881e;
+                        }
+                    }
+                }
+
+                .login-button {
+                    padding:10px 0px;
+                    margin: 10px 0px;
+                    background: #00bc2a;
+                    border-radius: 10px;
+                    border: none;
+                    color: white;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                .register-link {
+                    a {
+                        color: #00bc2a;
+                        &:hover {
+                            color: #01881e;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .login-page {
+        &-wrapper {
+            .logo {
+                display: flex;
+                margin-top: 5px;
+                margin-bottom: 5px;
+
+                img {
+                    height: 150px;
+                    width: 150px;
+                }
+            }
+
+            .login {
+                &-contain {
+                    padding: 40px;
+                    padding-top: 0px;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &-left {
+                    .login-social {
+                        border-right: none;
+                        border-bottom: 2px solid rgb(223, 218, 218);
+                        padding-bottom: 20px;
+                        margin: 0px;
+                    }
+                }
+
+                &-description {
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,238 @@
+.package {
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+
+    &.active {
+        justify-content: space-around;
+    }
+
+    &-left {
+        width: 45%;
+        background: white;
+    }
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+
+    &-group {
+        .title {
+            border-bottom: 1px solid rgb(202, 201, 201);
+            padding: 15px;
+            font-size: 12px;
+            color: rgba(0,0,0,.54);
+        }
+
+    }
+
+    &-parent {
+        &-item {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px;
+            &:hover {
+                background: rgba(162, 243, 173, 0.2);
+            }
+            img {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &-child-list {
+        margin-left: 1rem;
+        padding-left: 1rem;
+        border-left: 1px dashed rgb(201, 199, 199);
+    }
+
+    &-child-item {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            background: rgba(162, 243, 173, 0.2);
+        }
+
+        img {
+            margin-right: 1rem;
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    &-right {
+        width: 45%;
+        background: white;
+        display: none;
+        &.active {
+            display: block;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(224, 219, 219);
+            padding: 0px 20px;
+            
+            &-left {
+                padding: 10px 0px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                p {
+                    margin-left: 20px;
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: rgb(66, 64, 64);
+                }
+
+                .closeIcon {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+
+            &-right {
+                display: flex;
+                justify-content: center;
+
+                .button-method {
+                    display: flex;
+                    align-items: center;
+                    
+                    button {
+                        font-weight: bold;
+                        height: 36px;
+                        width: 96px;
+                    }
+                }
+            }
+        }
+
+        .detail-content {
+            padding: 30px;
+            display: flex;
+            border-bottom: 1px solid rgb(212, 206, 206);
+            img {
+                width: 60px;
+                height: 60px;
+                margin-right: 30px;
+            }
+
+            .title {
+                color: rgba(0,0,0,.87);
+                line-height: 32px;
+                font-size: 24px;
+                margin-top: 4px;
+                margin-bottom: 1px;
+            }
+
+            .wallet-name {
+                line-height: 20px;
+                font-size: 14px;
+                color: rgba(0,0,0,.87);
+                margin-bottom: 3px;
+            }
+        }
+        .package-group {
+            cursor: pointer;
+            padding: 15px;
+            text-align: center;
+            color: #2db84c;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgb(212, 206, 206);
+            &:hover {
+                background: rgba(162, 243, 173, 0.2);
+            }
+        }
+    }
+   
+}
+
+.edit-package {
+    img {
+        height: 35px;
+        width: 35px;
+    }
+
+    .group {
+        height: 64px;
+        border: 1px solid rgb(199, 196, 196);
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        label {
+            cursor: pointer;
+        }
+        p {
+            font-size: 12px;
+            padding-bottom: 3px;
+            color: rgba(0,0,0,.54);
+        }
+    }
+
+    .icon-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            height: 35px;
+            width: 35px;
+        }
+
+        .chevron-right {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .package-name {
+        height: 64px;
+        display: flex;
+        flex-direction: column;
+       
+        
+        input {
+            width: 100%;
+            color: rgba(0,0,0,.87);
+            font-size: 17px;
+            height: 27px;
+            border: none;
+            font-weight: 400;
+            outline: none;
+        }
+    }
+
+    .wallet, .parent {
+        &-info {
+            display: flex;
+            align-items: center;
+            label {
+                font-size: 16px;
+                color: rgba(0,0,0,.87);
+                font-weight: 400;
+            }
+        }
+        img {
+            margin-right: 20px;
+            height: 25px;
+            width: 25px;
+        }
+    }
+}
+
+.btn-add-package {
+    text-transform: uppercase;
+    font-weight: bold !important;
+}
+
+
+.actions {
+    text-align: right;
+    width: 100%;
+}

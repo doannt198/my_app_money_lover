@@ -1,0 +1,51 @@
+
+
+// Css for Dropdown
+.p-dropdown {
+    width: 100%;
+    border: none;
+}
+
+.select-item {
+    .p-dropdown {
+        width: 100%;
+        border: none;
+    }
+    
+    img {
+        height: 30px;
+        width: 30px;
+        margin-right: 1rem;
+    }
+
+    .p-dropdown-label {
+        padding: 0px;
+    }
+}
+
+// Detail dropdown
+.dropdown-item {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 30px;
+        width: 30px;
+        margin-right: 0.5rem;
+    }
+
+    .wallet-name {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .wallet-amount {
+        font-size: 12px;
+    }
+
+    &.selected {
+        .wallet-name {
+            margin-top: 5px;
+        }
+    }
+}

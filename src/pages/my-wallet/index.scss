@@ -1,0 +1,318 @@
+.my-wallet {
+    color: rgba(0,0,0,.54);
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &.active {
+        justify-content: space-between;
+    }
+
+    &-left {
+        width: 40%;
+        background: white;
+        box-shadow: 0 0 5px gray;
+        margin-right: 15px;
+
+        .wallet {
+            &-list {
+
+            }
+
+            &-item {
+                .title {
+                    padding: 10px 20px;
+                    border-bottom: 1px solid rgb(207, 205, 205);
+                }
+
+                &--content {
+                    padding: 20px;
+                    display: flex;
+                    cursor: pointer;
+                    img {
+                        margin-right: 20px;
+                    }
+
+                    &:hover {
+                        background: rgba(45,184,76,.2);
+                        transition: 0.3s ease-in-out;
+                    }
+
+                    &.active {
+                        background: rgba(45,184,76,.2);
+                    }
+                }
+                border-bottom: 1px solid  rgb(207, 205, 205);
+            }
+        }
+    }
+
+  
+
+    &-right {
+        width: 55%;
+        background: white;
+        box-shadow: 0 0 5px gray;
+        margin-right: 10px;
+        position: relative;
+        z-index: 500;
+        overflow-x: hidden;
+        display: none;
+        &.active {
+            display: block;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(224, 219, 219);
+            padding: 0px 20px;
+            &-left {
+                padding: 10px 0px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    cursor: pointer;
+                }
+                
+                p {
+                    margin-left: 20px;
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: rgb(66, 64, 64);
+                }
+            }
+
+            &-right {
+                display: flex;
+                justify-content: center;
+
+                .button-method {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    span {
+                        padding: 10px 25px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin-right: 5px;
+                    }
+
+                    .btn {
+                        border-radius: 5px;
+                    }
+                    
+                    .btn-delete {
+                        color: #f25a5a;
+                        &:hover {
+                            background: rgba(240, 55, 55, 0.3);
+                        }
+                    }
+
+                    .btn-edit {
+                        color: #2db84c;
+                        &:hover {
+                            background: rgba(45, 184, 76, 0.3);
+                        }
+                    }
+                }
+            }
+        }
+
+        .wallet {
+            &-info {
+                padding: 20px 40px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid rgb(206, 204, 204);
+                img {
+                    margin-right: 20px;
+                }
+            }
+
+            &-name {
+                font-size: 22px;
+                font-weight: bold;
+            }
+        }
+        .user {
+            padding: 20px 40px;
+            line-height: 20px;
+            border-bottom: 1px solid rgb(206, 204, 204);
+
+            &-info {
+                padding: 20px 0px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-right: 20px;
+                }
+            }
+
+            &-name {
+                font-weight: bold;
+            }
+        }
+
+        .method {
+            padding: 20px 40px;
+            border-bottom: 1px solid rgb(209, 207, 207);
+
+            &-item {
+                padding: 20px 0px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                input {
+                    margin-right: 20px;
+                }
+              
+                .not-count-total {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .share {
+            ul {
+                list-style: none;
+                li {
+                    padding: 15px 40px;
+                    text-align: center;
+                    color: #2db84c;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    border-bottom: 1px solid rgb(209, 207, 207);
+
+                    &:hover {
+                        background: rgba(45, 184, 76, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn-add-transaction {
+    text-decoration: none;
+    border: 0px;
+    background: #1aa333;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 4px gray;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .container {
+        .my-wallet {
+            display: block;
+            &-left {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+    
+            &-right {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+#adjustAmountContent {
+    color: rgba(0,0,0,.87);
+
+    .header {
+        padding: 10px 0px;
+        font-size: 20px;
+    }
+
+    .wallet {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+
+        &-right {
+          display: flex;
+        }
+        
+        &-icon {
+            height: 30px;
+            width: 30px;
+            margin-right: 20px;
+        }
+
+        &-content {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    .amount {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+
+        input {
+            width: 100%;
+            font-size: 14px;
+            padding: 5px;
+            margin-top: 5px;
+            border: gray;
+        }
+    }
+
+    .not-for-report {
+        display: flex;
+        align-items: center;
+        line-height: 20px;
+        input {
+            margin-right: 20px;
+        }
+    }
+
+    .button-wrapper {
+        padding: 10px 0px;
+        text-align: right;
+        .btn {
+            color: #2db84c;
+            font-weight: bold;
+            padding: 10px 35px;
+            margin-left: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            background: rgba(92, 240, 119, 0.2);
+
+            &:hover {
+                background: rgba(26, 163, 51, 0.3);
+            }
+        }
+    }
+    .chevron-right {
+        height: 15px;
+        width: 15px;
+    }
+}

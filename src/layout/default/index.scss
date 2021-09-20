@@ -1,0 +1,28 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: sans-serif;
+  }
+  
+  html, body {
+    background: #e4e4e4;
+  }
+  a {
+    text-decoration: none;
+  }
+  .container {
+    z-index: 100;
+    font-size: 12px;
+    
+    &-wrapper {
+        .right {
+            margin-left: 100px;
+           /*  img {
+                // width: 30px;
+                // height: 30px;
+            } */
+        }
+    }
+  }

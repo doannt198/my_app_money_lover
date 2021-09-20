@@ -1,0 +1,27 @@
+.icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    .icon {
+        height: 45px;
+        width: 45px;
+        margin: 5px;
+    
+        img {
+            height: 35px;
+            width: 35px;
+            cursor: pointer;
+        }
+    
+        label {
+            height: 100%;
+            width: 100%;
+        }
+    
+        input:checked + label img {
+            border-radius: 100%;
+            box-shadow: 0 0 5px 3px rgb(1, 168, 29);
+        }
+    }
+}
